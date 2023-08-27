@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+}
+
+table td,
+table th {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--corAzulPrincipal);
+  color: white;
+}
+
+.table_selected_good {
+  background-color: var(--corResultGood);
+}
+
+.table_selected_bad {
+  background-color: var(--corResultBad);
+}

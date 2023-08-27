@@ -25,19 +25,32 @@ form {
   justify-content: space-between;
 }
 
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 label,input {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 700;  
+}
+
+.formLabel {
+  display: flex;
+  align-items: center;
 }
 
 input {
   border: 1px solid #8d8d8d;
   border-radius: 6px;
   margin: 0px 12px;
+  height: 100%;
 }
 
 button {
   width: 250px;
+  font-size: 16px;
   border: 1px solid var(--corAzulPrincipal);
   border-radius: 5px;
   padding: 8px;
@@ -59,4 +72,64 @@ button:hover {
   --corResultBad: #ffeaa7;
 }
 
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 85%;
+  }
+
+  form {
+    display: block;
+  }
+
+  .formRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+  
+  input {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .formRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  label {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  
+  input {
+    font-size: 18px;
+    font-weight: 400;
+    width: 90%;
+    margin: 0;
+    height: 100%;
+  }
+
+  button {
+    width: 150px;
+  }
+
+}
 

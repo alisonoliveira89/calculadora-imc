@@ -16,15 +16,27 @@ function App() {
     <>
       <div className="container">
         <form className="formImc">
-            <label htmlFor="altura">Altura</label>
-            <input type="number" id="altura" placeholder="(Ex: 1,80)" onBlur={(e) => setAltura(e.target.value)} />
-          
-            <label htmlFor="peso">Peso</label>
-            <input type="number" id="peso" placeholder="(Ex: 80)" onBlur={(e) => setPeso(e.target.value)} />
-          
-            <button type="button" onClick={calculaIMC}>
-              Calcular
-            </button>
+            <div className="formRow">
+              <div className="formLabel">
+                <label htmlFor="altura">Altura</label>
+              </div>
+              <div>
+                <input type="number" id="altura" placeholder="(Ex: 1,80)" onBlur={(e) => setAltura(e.target.value)} />
+              </div>
+            </div>
+            <div className="formRow">
+              <div className="formLabel">
+                <label htmlFor="peso">Peso</label>
+              </div>
+              <div>
+                <input type="number" id="peso" placeholder="(Ex: 80)" onBlur={(e) => setPeso(e.target.value)} />
+              </div>
+            </div>
+            <div className="formRow">
+              <button type="button" onClick={calculaIMC}>
+                Calcular
+              </button>
+            </div>
         </form>        
         {resultado > 0 ? (
           <div className="resultado">
